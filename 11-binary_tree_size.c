@@ -2,7 +2,6 @@
 
 /**
  * binary_tree_size - function that measures the size
- * using in-order traversal
  *
  * @tree: pointer to the root node of the tree to traverse
  *
