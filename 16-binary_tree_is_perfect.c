@@ -115,6 +115,7 @@ int binary_tree_is_perfect(const binary_tree_t *tree)
 	}
 	for (i = 0; i < (height); i++)
 	{
+		/* a perfect binary tree of height h has (2pow(h − 1) - 1) nodes */
 		perfect_size *= 2;
 	}
 	perfect_size -= 1;
