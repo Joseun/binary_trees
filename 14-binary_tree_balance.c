@@ -10,13 +10,22 @@
 
 int binary_tree_balance2(const binary_tree_t *tree)
 {
+	size_t rbalance = 0, lbalance = 0;
+	int balance;
+
 	if (tree == NULL)
 	{
 		return (0);
 	}
-	size_t rDepth = binary_tree_balance2(tree->right);
-	size_t lDepth = binary_tree_balance2(tree->left);
-	int balance = lDepth - rDepth + 1;
+	if (tree->right)
+	{
+		rbalance += binary_tree_balance2(tree->right);
+	}
+	if (tree->left)
+	{
+		lbalance += binary_tree_balance2(tree->left);
+	}
+	balance = lbalance - rbalance + 1;
 	return (balance);
 }
 
